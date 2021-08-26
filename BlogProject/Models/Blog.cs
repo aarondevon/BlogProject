@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -35,6 +36,10 @@ namespace BlogProject.Models
         [Display(Name = "Image")]
         [DataType(DataType.Upload)]
         public IFormFile ImageFile { get; set; }
+
+        //Navigation Property
+        public virtual IdentityUser Author { get; set; }
+        public virtual ICollection<Post> Posts { get; set; } = new HashSet<Post>();
 
     }
 }
