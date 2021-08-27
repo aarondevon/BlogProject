@@ -30,7 +30,7 @@ namespace BlogProject.Models
 
         [Display(Name="Blog Image")]
         public byte[] ImageData { get; set; }
-        public string ImageType { get; set; }
+        public string ImageFileType { get; set; }
 
         [NotMapped]
         [Display(Name = "Image")]
